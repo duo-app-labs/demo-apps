@@ -1,0 +1,53 @@
+PROJECT NEXUS — PROJECT NOTES
+Version: 1.0.0 (prototype label)
+Organization: Duo App Labs
+Live web prototype: https://nexus-impossible-flow-hub.base44.app/
+Prototype platform: Base44
+Source code status: Not exported or committed to this repository.
+
+OVERVIEW
+Nexus is an AI-powered productivity application intended to help people organize tasks, capture ideas, and use an AI assistant within one workspace. The current version is a Base44-hosted web prototype, not a standalone native mobile or desktop application.
+
+CURRENT PROTOTYPE
+- Dashboard with task and idea summaries.
+- Tasks: create, view, edit, change status and priority, and delete.
+- Ideas: create, view, and edit.
+- AI Chat: question-and-answer interaction and conversation history.
+- Account/profile interface.
+- Responsive web access via the published URL.
+
+MANUALLY VERIFIED DURING PROTOTYPE TESTING
+- Dashboard, Tasks, Ideas, and AI Chat pages open.
+- AI Chat answered a simple question, and its history persisted after a page reload.
+- Task creation, persistence, editing, completion, and deletion worked.
+- Idea creation, persistence, and editing worked.
+
+IMPLEMENTATION NOTES AND LIMITATIONS
+- The initial Base44 generation reported a processing interruption, although the saved prototype remained accessible.
+- The exact underlying AI model and the implementation of all backend/security features have not been independently verified.
+- Base44 reported implementing a 3-successful-AI-replies-per-UTC-day limit per signed-in user, with server-side enforcement; this remains subject to further testing.
+- Per-user data isolation, permission boundaries, error handling, and any AI access to saved tasks/ideas require dedicated validation.
+- This file documents product status; it is NOT the application's source code.
+
+TARGET PRODUCT DIRECTION
+- A unified, intuitive personal productivity app.
+- AI-assisted planning and idea-to-task workflows with explicit user approval before data changes.
+- Secure accounts and account-isolated data.
+- Future calendar/email integrations and controlled AI quotas.
+- Longer-term iOS, Android, macOS, Windows, and web distribution, subject to technology decisions.
+- Potential Free/Pro offerings after usage economics and security are validated.
+
+RECOMMENDED NEXT MILESTONES
+1. Preserve documentation, screenshots, and build prompts for the Base44 prototype.
+2. Audit user authentication, data isolation, and integration-credit safeguards before widening access.
+3. Define a small, measurable MVP specification and acceptance tests for Nexus and Toolbox.
+4. Decide whether to retain Base44 or implement/export a code-owned architecture; verify code-export rights and plan requirements before paying.
+5. Establish a GitHub repository for Nexus documentation now, and add real source code only when obtained or implemented.
+6. Implement, test, and version the code-owned MVP; use staged releases and separate test/production environments.
+
+OWNERSHIP AND RELEASE NOTES
+- Duo App Labs is the umbrella organization for Nexus and Toolbox.
+- 'v1.0.0' here refers to the prototype label, not a verified GitHub source-code release or App Store release.
+- Do not publish API keys, private user data, or credentials in GitHub.
+
+Last updated: 2026-11-22
