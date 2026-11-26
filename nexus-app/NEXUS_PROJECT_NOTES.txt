@@ -1,17 +1,18 @@
 PROJECT NEXUS — PROJECT NOTES
-Version: 1.0.0 (prototype label)
+Version: 1.1.0 (prototype label)
 Organization: Duo App Labs
-Live web prototype: https://nexus-impossible-flow-hub.base44.app/
+Current live web prototype: https://align-nexus.base44.app/
+Previous prototype URL: https://nexus-impossible-flow-hub.base44.app/
 Prototype platform: Base44
 Source code status: Not exported or committed to this repository.
 
 OVERVIEW
 Nexus is an AI-powered productivity application intended to help people organize tasks, capture ideas, and use an AI assistant within one workspace. The current version is a Base44-hosted web prototype, not a standalone native mobile or desktop application.
 
-CURRENT PROTOTYPE
+CURRENT PROTOTYPE (documented; live interactive behavior not independently rechecked on 2026-11-26)
 - Dashboard with task and idea summaries.
 - Tasks: create, view, edit, change status and priority, and delete.
-- Ideas: create, view, and edit.
+- Ideas: create, view, edit, and convert ideas into tasks (confirmed by project owner on 2026-11-26).
 - AI Chat: question-and-answer interaction and conversation history.
 - Account/profile interface.
 - Responsive web access via the published URL.
@@ -37,12 +38,41 @@ TARGET PRODUCT DIRECTION
 - Longer-term iOS, Android, macOS, Windows, and web distribution, subject to technology decisions.
 - Potential Free/Pro offerings after usage economics and security are validated.
 
+NEXT PROPOSED FEATURE — TASK SUBTASKS / CHECKLISTS (NOT YET VERIFIED OR IMPLEMENTED)
+Goal: Break large tasks into manageable steps without adding a separate module.
+- Allow each task to contain an ordered checklist of subtasks.
+- Add, edit, complete, uncomplete, reorder, and remove checklist items.
+- Show progress (e.g., 2 of 5 steps complete) on the task detail view.
+- Preserve checklist data across page reloads and devices.
+- Keep checklist items scoped to the task owner's account.
+- Do not automatically mark the parent task completed without an explicit user action.
+- Implement without calling AI, so ordinary checklist interactions do not use AI credits.
+
+FEATURE ACCEPTANCE TESTS (PROPOSED, NOT VERIFIED)
+1. Add three checklist steps to a task; all three persist after reload.
+2. Completing one step displays 1 of 3 completed.
+3. Editing, reordering, and removing steps work as expected.
+4. Another signed-in account cannot access or modify the checklist.
+5. Existing tasks without subtasks continue working normally.
+6. A failed save displays an error without losing existing task data.
+
+IDEA-TO-TASK WORKFLOW (EXISTING; USER CONFIRMED)
+- Users can already convert ideas into tasks.
+- Exact interaction details, preservation behavior, and cross-account permissions have not been independently audited.
+
+OTHER POTENTIAL FEATURES (NOT YET IMPLEMENTED OR VERIFIED)
+- Recurring tasks and reminders after the checklist feature is stable.
+- Search and filtering across both tasks and ideas.
+- AI assistance that can reference the signed-in user's own data, only after
+  authorization/privacy checks and explicit approval for changes.
+- Notifications and calendar integration after the core workflow is stable.
+
 RECOMMENDED NEXT MILESTONES
 1. Preserve documentation, screenshots, and build prompts for the Base44 prototype.
 2. Audit user authentication, data isolation, and integration-credit safeguards before widening access.
 3. Define a small, measurable MVP specification and acceptance tests for Nexus and Toolbox.
 4. Decide whether to retain Base44 or implement/export a code-owned architecture; verify code-export rights and plan requirements before paying.
-5. Establish a GitHub repository for Nexus documentation now, and add real source code only when obtained or implemented.
+5. Keep Nexus documentation in duo-app-labs/demo-apps/nexus-app; add real source code only when obtained or implemented.
 6. Implement, test, and version the code-owned MVP; use staged releases and separate test/production environments.
 
 OWNERSHIP AND RELEASE NOTES
@@ -50,4 +80,7 @@ OWNERSHIP AND RELEASE NOTES
 - 'v1.0.0' here refers to the prototype label, not a verified GitHub source-code release or App Store release.
 - Do not publish API keys, private user data, or credentials in GitHub.
 
-Last updated: 2026-11-22
+GITHUB DOCUMENTATION URL
+https://github.com/duo-app-labs/demo-apps/blob/main/nexus-app/NEXUS_PROJECT_NOTES.txt
+
+Last updated: 2026-11-26
