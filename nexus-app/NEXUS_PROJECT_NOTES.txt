@@ -77,7 +77,7 @@ RECOMMENDED NEXT MILESTONES
 
 OWNERSHIP AND RELEASE NOTES
 - Duo App Labs is the umbrella organization for Nexus and Toolbox.
-- 'v1.0.0' here refers to the prototype label, not a verified GitHub source-code release or App Store release.
+- 'v1.1.0' here refers to the prototype label, not a verified GitHub source-code release or App Store release.
 - Do not publish API keys, private user data, or credentials in GitHub.
 
 GITHUB DOCUMENTATION URL
